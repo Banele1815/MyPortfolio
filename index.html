@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gcina Banele Kubeka | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav>
   <span class="nav-logo">// gcina-banele.dev</span>
+  
   <ul class="nav-links">
     <li><a onclick="scrollToSection('about')">About</a></li>
     <li><a onclick="scrollToSection('skills')">Skills</a></li>
@@ -20,41 +21,61 @@
   <button class="nav-cta" onclick="scrollToSection('contact')">Hire me</button>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-content">
-    <div class="hero-badge">open to opportunities</div>
-    <h1>Hi, I'm <span class="name-accent">Gcina Banele<br>Kubeka</span>.<br>I build things<br>that actually ship.</h1>
-    <div class="hero-role">
-      <span>Fullstack Developer</span>
-      <span class="sep">/</span>
-      <span>Microsoft Azure Cloud Engineer</span>
-      <span class="sep">/</span>
-      <span>DevOps Engineer</span>
-    </div>
-    <div class="hero-actions">
-      <button class="btn-primary" onclick="scrollToSection('projects')">See my work</button>
-      <a class="btn-ghost" href="https://github.com/Banele1815" target="_blank">GitHub profile</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">4<span>+</span></div>
-        <div class="stat-label">live projects</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">3<span>+</span></div>
-        <div class="stat-label">languages</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">100<span>%</span></div>
-        <div class="stat-label">evidence-first</div>
-      </div>
-    </div>
+<!-- HERO --> 
+ <div class="hero">
+   <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+     <div class="hero-glow2"></div>
+       <div class="logo">
+    <img src="images/baneleprofile.png" alt="Logo">
   </div>
-</div>
+      <div class="hero-content">
+         <div class="hero-badge">open to opportunities</div>
+          <h1> Hi, I'm 
+            <span class="name-accent">
+               Gcina Banele<br>Kubeka
+               </span>.<br>
+                I build things<br>
+                 that actually ship.
+                 </h1>
+                 
+                 <div class="hero-role">
+                   <span>Fullstack Developer</span>
+                    <span class="sep">/</span>
+                     <span>Microsoft Azure Cloud Engineer</span>
+                      <span class="sep">/</span>
+                       <span>DevOps Engineer</span>
+                       </div>
+                       
+                       <div class="hero-actions">
+                         <button class="btn-primary" onclick="scrollToSection('projects')">
+                           See my work
+                           </button>
+                           
+                           <a class="btn-ghost"
+                            href="https://github.com/Banele1815"
+                             target="_blank">
+                              GitHub profile 
+                            </a>
+                           </div>
+ <!-- PROFILE IMAGE -->
+   <div class="hero-stats">
+     <div class="stat-item">
+       <div class="stat-num">4<span>+</span>
+      </div>
+   <div class="stat-label">live projects</div>
+   </div>
+    <div class="stat-item">
+       <div class="stat-num">3<span>+</span></div>
+        <div class="stat-label">languages</div>
+       </div>
+        <div class="stat-item">
+           <div class="stat-num">100<span>%</span></div>
+            <div class="stat-label">evidence-first</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 <!-- ABOUT -->
 <section id="about">
@@ -280,7 +301,9 @@
       </div>
       <div class="project-footer">
         <div class="project-status"><span class="status-dot"></span>Live on Netlify</div>
-        <button class="case-study-btn" onclick="sendPrompt('Help me write a case study for my News Tabloid UI project. It was a UI screenshot recreation of a news tabloid layout using HTML and CSS.')">Case study ↗</button>
+        <a class="case-study-btn" href="case-studies/news-tabloid.html">
+        Case study ↗
+        </a>
       </div>
     </div>
 
@@ -302,9 +325,47 @@
       </div>
       <div class="project-footer">
         <div class="project-status"><span class="status-dot"></span>Live on Netlify</div>
-        <button class="case-study-btn" onclick="sendPrompt('Help me write a case study for my Tesla-inspired landing page. It was a frontend challenge to build a Tesla-style landing page.')">Case study ↗</button>
+        <a class="case-study-btn" href="case-studies/tesla-landing-page.html">
+            Case Study ↗
+        </a>
       </div>
     </div>
+    <div class="project-card card-purple">
+
+  <div class="project-header">
+    <div class="project-icon icon-netflix">🎬</div>
+
+    <div class="project-links">
+      <a href="https://github.com/Banele1815/Netflix-landing-page.git" class="project-link" target="_blank">GitHub</a>
+      <a href="https://net-landing.netlify.app/" class="project-link" target="_blank">Live ↗</a>
+    </div>
+  </div>
+
+  <div class="project-title">Netflix-Inspired UI Clone</div>
+
+  <div class="project-desc">
+    A Netflix-inspired landing page UI clone built using HTML and CSS. 
+    Focused on replicating modern streaming platform layout, responsive design, 
+    and component-based UI structure.
+  </div>
+
+  <div class="project-tags">
+    <span class="project-tag">HTML</span>
+    <span class="project-tag">CSS</span>
+    <span class="project-tag">Flexbox</span>
+    <span class="project-tag">UI Clone</span>
+    <span class="project-tag">Responsive</span>
+  </div>
+
+  <div class="project-footer">
+    <div class="project-status"><span class="status-dot"></span>Live Project</div>
+
+    <a class="case-study-btn" href="case-studies/netflix-ui.html">
+      Case Study ↗
+    </a>
+  </div>
+
+</div>
 
     <div class="project-card card-pink">
       <div class="project-header">
