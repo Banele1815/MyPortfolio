@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  opacity: 0.8;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* TAGS */
+.tags span {
+  display: inline-block;
+  background: #eee;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+}
+
+/* IMAGE */
+.preview {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* LINKS */
+.links {
+  margin-top: 10px;
+}
+
+.links a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #111;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
