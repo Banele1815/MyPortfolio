@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Keep Clone Case Study</title>
+  <link rel="stylesheet" href="../css/google-keep.css" />
+</head>
+
+<body>
+
+<header class="hero">
+  <h1>Google Keep Clone</h1>
+  <p>React Application Case Study</p>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2>📌 Project Overview</h2>
+    <p>
+      This project is a responsive Google Keep-inspired note-taking application
+      built with React and Vite. It allows users to create, edit, search, organise,
+      archive, and delete notes through a familiar and easy-to-use interface.
+    </p>
+
+    <div class="tags">
+      <span>React</span>
+      <span>Vite</span>
+      <span>JavaScript</span>
+      <span>CSS</span>
+      <span>Local Storage</span>
+      <span>Responsive Design</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🎯 Problem Statement</h2>
+    <p>
+      A useful note-taking application must make it quick to capture information
+      while still helping users organise and find it later. The main challenge was
+      managing several note states and features without making the interface feel
+      complicated, while also keeping the experience consistent on desktop and mobile.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🧠 My Role</h2>
+    <p>
+      I worked as the frontend developer responsible for migrating the original
+      HTML, CSS, and JavaScript application to React, dividing the interface into
+      reusable components, managing application state, and implementing the
+      responsive user experience.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>✨ Core Features</h2>
+    <ul>
+      <li>Create and edit notes through a focused note modal</li>
+      <li>Search notes instantly by title or content</li>
+      <li>Pin important notes and apply custom note colours</li>
+      <li>Organise notes with category tags and reminders</li>
+      <li>Archive and unarchive notes</li>
+      <li>Move notes to the bin, restore them, or delete them permanently</li>
+      <li>Switch between light and dark themes</li>
+      <li>Use the application across desktop and mobile screen sizes</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>⚙️ Development Process</h2>
+    <ul>
+      <li>Reviewed the original vanilla JavaScript application and its behaviours</li>
+      <li>Set up the React project using Vite</li>
+      <li>Split the interface into reusable components</li>
+      <li>Moved DOM-based logic into React state, props, and event handlers</li>
+      <li>Added advanced organisation and personalisation features</li>
+      <li>Tested layouts and interactions across different screen sizes</li>
+      <li>Prepared and deployed the production build on Netlify</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>💻 Implementation</h2>
+    <p>
+      The application uses React components for the header, sidebar, note composer,
+      notes grid, note cards, and editing modal. React state controls the active view,
+      search results, note actions, and interface updates. Notes are saved in local
+      storage so they remain available after the browser is refreshed, while the
+      selected theme is stored separately.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🧪 Challenges</h2>
+    <p>
+      The biggest challenge was keeping every note action predictable across the
+      Notes, Archive, and Bin views. Migrating the project to React also required
+      replacing direct DOM manipulation with state-driven rendering. I solved this
+      by centralising note updates and giving each component a clear responsibility.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🚀 Outcome</h2>
+    <p>
+      The final result is a deployed, responsive React application that goes beyond
+      a visual clone. It demonstrates component-based development, state management,
+      browser persistence, responsive design, and the ability to extend an existing
+      project with useful real-world features.
+    </p>
+
+    <div class="links">
+      <a href="https://github.com/Banele1815/Banele-Google-Keep.git" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+      <a href="https://banele-google-keep-react.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>📚 Key Learnings</h2>
+    <ul>
+      <li>Building reusable React components</li>
+      <li>Managing shared state and conditional views</li>
+      <li>Persisting application data with local storage</li>
+      <li>Migrating a vanilla JavaScript project to React</li>
+      <li>Designing responsive and accessible interactions</li>
+      <li>Deploying a Vite application to Netlify</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  © 2026 My Portfolio
+</footer>
+
+</body>
+</html>
