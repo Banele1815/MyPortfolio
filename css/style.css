@@ -153,11 +153,13 @@ section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
 .project-card:hover::before { opacity: 1; }
 .card-purple::before { background: linear-gradient(90deg, var(--accent), var(--accent2)); }
 .card-teal::before   { background: linear-gradient(90deg, var(--accent2), var(--green)); }
+.card-red::before {background: linear-gradient(90deg, #ff0000, #ff6b6b); }
 .card-pink::before   { background: linear-gradient(90deg, var(--accent3), var(--amber)); }
 .card-amber::before  { background: linear-gradient(90deg, var(--amber), var(--accent3)); }
 .project-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem; }
 .project-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
 .project-icon.icon-news    { background: rgba(124,111,255,0.12); }
+.project-icon.icon-youtube-ui-clone {background: rgba(255, 0, 0, 0.12); }
 .project-icon.icon-tesla   { background: rgba(78,205,196,0.12); }
 .project-icon.icon-game    { background: rgba(255,107,157,0.12); }
 .project-icon.icon-quiz    { background: rgba(255,179,71,0.12); }
