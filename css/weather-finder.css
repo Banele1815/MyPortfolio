@@ -220,16 +220,6 @@ body::before {
   outline-offset: 3px;
 }
 
-.links .secondary-link {
-  color: var(--text);
-  background: transparent;
-  border-color: var(--border2);
-}
-
-.links .secondary-link:hover {
-  background: var(--bg3);
-}
-
 .footer {
   padding: 2.5rem 1rem;
   text-align: center;
