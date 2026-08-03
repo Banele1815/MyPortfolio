@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Case study for Gcina Banele Kubeka's React Weather Finder application."
+  />
+  <title>Weather Finder Case Study</title>
+
+  <link rel="stylesheet" href="../css/weather-finder.css" />
+</head>
+
+<body>
+
+<header class="hero">
+  <h1>Weather Finder</h1>
+  <p>React API Integration Case Study</p>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2>📌 Project Overview</h2>
+    <p>
+      Weather Finder is a responsive React application that allows users to
+      search for a city and view its current weather information. It retrieves
+      live data from the Weatherstack API and presents it in a simple,
+      user-friendly interface with clear loading and error states.
+    </p>
+
+    <div class="tags">
+      <span>React</span>
+      <span>Vite</span>
+      <span>JavaScript</span>
+      <span>Weatherstack API</span>
+      <span>Fetch API</span>
+      <span>Custom Hooks</span>
+      <span>Netlify</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🎯 Problem Statement</h2>
+    <p>
+      Users need a quick way to find current weather information for a city.
+      The challenge was to connect a React interface to an external API,
+      manage asynchronous requests, and give users useful feedback while data
+      was loading or when a search could not be completed.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🧠 My Role</h2>
+    <p>
+      I worked as the frontend developer responsible for building the React
+      interface, integrating the Weatherstack API, separating the API logic
+      into a reusable custom hook, handling application states, and deploying
+      the completed project to Netlify.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>⚙️ Process</h2>
+    <ul>
+      <li>Created the project using React and Vite</li>
+      <li>Designed a responsive city-search interface</li>
+      <li>Connected the application to the Weatherstack API</li>
+      <li>Moved the request and state logic into a custom useWeather hook</li>
+      <li>Added loading, error, empty-input, and successful-result states</li>
+      <li>Configured the API key using environment variables</li>
+      <li>Deployed and tested the application on Netlify</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>🖼️ UI Preview</h2>
+    <img
+      src="../images/weather-finder.png"
+      alt="Weather Finder application displaying current weather information"
+      class="preview"
+    />
+  </section>
+
+  <section class="card">
+    <h2>💻 Implementation</h2>
+    <p>
+      The application uses React state to display the weather result, loading
+      status, and error messages. All request logic lives inside the reusable
+      <strong>useWeather</strong> custom hook. The hook builds the Weatherstack
+      request, fetches current weather data, validates the response, and then
+      updates the interface. The API key is loaded from a Vite environment
+      variable and is not committed to the GitHub repository.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🧪 Challenges</h2>
+    <p>
+      One of the main challenges was handling the API key correctly in both
+      local development and the deployed Netlify application. I solved this by
+      using a local environment file during development and configuring the
+      same variable in Netlify. I also improved the user experience by showing
+      clear messages for empty searches, failed requests, and missing weather
+      results instead of leaving the page blank.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🚀 Outcome</h2>
+    <p>
+      The final result is a deployed weather-search application that retrieves
+      current data for user-selected cities. The project demonstrates my
+      ability to work with React, asynchronous API calls, custom hooks,
+      environment variables, conditional rendering, error handling, and
+      frontend deployment.
+    </p>
+
+    <div class="links">
+      <a
+        href="https://github.com/Banele1815/weather-finder.git"
+        target="_blank"
+        rel="noopener noreferrer"
+      >GitHub Repo</a>
+
+      <a
+        href="https://banelegcina-weather-app.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Live Project</a>
+
+      <a class="secondary-link" href="../index.html#projects">Back to Portfolio</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>📚 Key Learnings</h2>
+    <ul>
+      <li>Fetching and displaying live data from a third-party API</li>
+      <li>Managing loading, error, and successful-result states in React</li>
+      <li>Separating API logic into a reusable custom hook</li>
+      <li>Using environment variables in Vite and Netlify</li>
+      <li>Debugging differences between local and deployed environments</li>
+      <li>Building a responsive interface with clear user feedback</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  © 2026 Gcina Banele Kubeka · Weather Finder Case Study
+</footer>
+
+</body>
+</html>
