@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="A case study of Urban Threads, an online clothing store built with JavaScript and Firebase."
+  />
+
+  <title>Urban Threads Case Study</title>
+
+  <link rel="stylesheet" href="../css/urban-threads.css" />
+</head>
+
+<body>
+
+<header class="hero">
+  <h1>Urban Threads</h1>
+  <p>Firebase E-Commerce Application Case Study</p>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2>📌 Project Overview</h2>
+
+    <p>
+      Urban Threads is a responsive online clothing store designed for customers
+      who want to browse and purchase modern streetwear. The application includes
+      product browsing, authentication, shopping-cart management, wishlists,
+      filtering, sorting and theme switching.
+    </p>
+
+    <div class="tags">
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>Firebase Authentication</span>
+      <span>Cloud Firestore</span>
+      <span>Responsive Design</span>
+      <span>Netlify</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🎯 The Problem</h2>
+
+    <p>
+      Customers need a simple way to discover clothing products, save items they
+      like and manage their shopping cart. The challenge was to create a complete
+      e-commerce experience without using a traditional custom backend server.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>💡 The Solution</h2>
+
+    <p>
+      I built a responsive multi-page online store and used Firebase to manage
+      authentication and application data. Customers can create accounts, log
+      in, browse products, search and filter the catalogue, manage a wishlist and
+      update their shopping cart.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>👤 My Role</h2>
+
+    <p>
+      I was responsible for planning, designing, developing, testing and
+      deploying the application. I created the user interface, connected the
+      project to Firebase and implemented the main shopping features using
+      JavaScript.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>✨ Key Features</h2>
+
+    <ul>
+      <li>User registration, login and logout</li>
+      <li>Firebase Authentication and persistent user sessions</li>
+      <li>Products loaded dynamically from Cloud Firestore</li>
+      <li>Product search, category filters and sorting</li>
+      <li>Add-to-cart and remove-from-cart functionality</li>
+      <li>Cart quantity controls and order-total calculation</li>
+      <li>Personal wishlists for authenticated users</li>
+      <li>Light and dark theme switching</li>
+      <li>Newsletter subscription interface</li>
+      <li>Responsive layouts for desktop and mobile devices</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>🛠️ Development Process</h2>
+
+    <p>
+      I began by planning the page structure and the information required for
+      products, users, carts and wishlists. I then built the shared navigation
+      and responsive layout before implementing authentication and Firestore
+      integration.
+    </p>
+
+    <p>
+      After the main functionality was working, I added filtering, sorting,
+      notifications, theme switching and form validation. I tested each feature
+      before deploying the project to Netlify.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🔥 Firebase Implementation</h2>
+
+    <p>
+      Firebase Authentication manages account creation, login, logout, password
+      resets and user sessions. Cloud Firestore stores product information and
+      user-specific cart and wishlist data.
+    </p>
+
+    <p>
+      Authentication-state listeners allow the interface to react when a user
+      signs in or out. Firestore snapshot listeners keep cart and wishlist
+      information updated without requiring the customer to reload the page.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🧠 Technical Decisions</h2>
+
+    <p>
+      I used JavaScript modules to separate responsibilities such as
+      authentication, shop functionality, cart management, wishlists, navigation
+      and theme switching. This made the application easier to understand,
+      maintain and debug.
+    </p>
+
+    <p>
+      Firebase was selected because it provided authentication and database
+      services without requiring a separate backend server.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>⚠️ Challenges and Solutions</h2>
+
+    <ul>
+      <li>
+        Product images initially failed because the Firestore image paths did not
+        match the actual file extensions. I corrected the stored paths and file
+        names.
+      </li>
+
+      <li>
+        The category filter originally continued showing all products. I updated
+        the filtering logic so the product list is recalculated whenever the
+        category changes.
+      </li>
+
+      <li>
+        Cart and wishlist data needed to remain connected to the correct user. I
+        used Firebase user IDs to keep each customer’s data separate.
+      </li>
+
+      <li>
+        Authentication errors were difficult for users to understand. I added
+        clearer feedback messages, form validation and button-loading states.
+      </li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>🧪 Testing</h2>
+
+    <p>
+      I manually tested account registration, login, logout, password reset,
+      product loading, searching, filtering, sorting, wishlist management and
+      cart calculations.
+    </p>
+
+    <p>
+      I also tested the application at different screen sizes to confirm that
+      the navigation, product cards, forms and cart layout remained usable on
+      mobile devices.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>📈 Project Outcome</h2>
+
+    <p>
+      The final result is a deployed and responsive e-commerce application that
+      demonstrates my ability to build user-facing interfaces, work with Firebase
+      services, manage application data and deliver a complete project from
+      planning to deployment.
+    </p>
+
+    <div class="links">
+      <a
+        href="https://github.com/Banele1815/urban-threads-store.git"
+        target="_blank"
+        rel="noopener noreferrer"
+      >GitHub Repo</a>
+
+      <a
+        href="https://urban-threads-baneles-project.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Live Demo ↗</a>
+
+      <a class="secondary-link" href="../index.html#projects">
+        Back to Portfolio
+      </a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🌱 What I Learned</h2>
+
+    <ul>
+      <li>Connecting a JavaScript application to Firebase services</li>
+      <li>Managing authenticated and unauthenticated user states</li>
+      <li>Structuring Firestore data for carts and wishlists</li>
+      <li>Building reusable JavaScript modules</li>
+      <li>Debugging database, filtering and image-path problems</li>
+      <li>Deploying and testing a complete web application</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>🚀 Future Improvements</h2>
+
+    <ul>
+      <li>Add secure online payment processing</li>
+      <li>Create an administrator dashboard for managing products</li>
+      <li>Add product reviews and ratings</li>
+      <li>Add order history and delivery tracking</li>
+      <li>Improve automated testing and accessibility</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Urban Threads Case Study · Gcina Banele Kubeka</p>
+</footer>
+
+</body>
+</html>
