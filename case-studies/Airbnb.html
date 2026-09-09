@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banele Airbnb Case Study</title>
+<link rel="stylesheet" href="airbnb-clone-case-study.css">
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="eyebrow">// case-study</div>
+    <h1>Banele Airbnb</h1>
+    <div class="subtitle">Full-Stack Airbnb Clone Case Study</div>
+
+    <div class="pills">
+      <span class="pill">React</span>
+      <span class="pill">Node.js</span>
+      <span class="pill">Express</span>
+      <span class="pill">MongoDB</span>
+      <span class="pill">Mongoose</span>
+      <span class="pill">JWT Authentication</span>
+      <span class="pill">Leaflet / OpenStreetMap</span>
+      <span class="pill">Render</span>
+    </div>
+
+    <div class="links">
+      <a class="primary" href="https://banele-airbnb-frontend.onrender.com/" target="_blank" rel="noopener">Live Demo ↗</a>
+      <a href="https://github.com/Banele1815/Banele-Airbnb.git" target="_blank" rel="noopener">GitHub Repo</a>
+      <a href="https://gcina-banele-portfolio.netlify.app/#projects">Back to Portfolio</a>
+    </div>
+
+    <section>
+      <h2>📌 Project Overview</h2>
+      <p>
+        Banele Airbnb is a full-stack clone of Airbnb, built as three connected
+        parts: a public-facing guest site, an admin dashboard for hosts, and a
+        Node.js/Express/MongoDB backend powering both. Guests can browse listings
+        by category and location, view detailed listing pages with an interactive
+        map and live cost calculator, and make reservations. Hosts get a
+        JWT-authenticated dashboard to create, update, and delete listings with
+        real image uploads.
+      </p>
+    </section>
+
+    <section>
+      <h2>🎯 The Problem</h2>
+      <p>
+        Recreating Airbnb's core booking flow end-to-end &mdash; not just the
+        visual layout, but the underlying logic: dynamic pricing that accounts
+        for nights, weekly discounts, cleaning and service fees, and occupancy
+        taxes; location-based search with an accurate map; and a secure,
+        role-aware admin system for managing listings and reservations, all
+        connected to a real database rather than static mock data.
+      </p>
+    </section>
+
+    <section>
+      <h2>💡 The Solution</h2>
+      <p>
+        I built a three-part application: a React/Vite frontend for guests, a
+        separate React admin dashboard, and a Node/Express/MongoDB REST API
+        connecting both. Listings, users, and reservations are stored in
+        MongoDB via Mongoose schemas, with JWT protecting all admin routes. The
+        frontend integrates Leaflet and OpenStreetMap for interactive,
+        no-API-key location maps, and a live cost calculator that recalculates
+        totals as guests change dates and guest count.
+      </p>
+    </section>
+
+    <section>
+      <h2>👤 My Role</h2>
+      <p>
+        I was responsible for the full build &mdash; planning the three-part
+        architecture, designing and building the UI, implementing the backend
+        API and database schemas, wiring up authentication, debugging
+        production issues, and deploying the finished application to Render.
+      </p>
+    </section>
+
+    <section>
+      <h2>✨ Key Features</h2>
+      <ul>
+        <li>Category and location-based listing search and filtering</li>
+        <li>Interactive map on listing search results and individual listing pages (Leaflet/OpenStreetMap)</li>
+        <li>Live cost calculator: nightly rate, weekly discount, cleaning fee, service fee, occupancy taxes</li>
+        <li>Reservation creation, stored in MongoDB</li>
+        <li>JWT-authenticated admin dashboard with role-aware access</li>
+        <li>Create, view, update, and delete listings with real image upload</li>
+        <li>Reservation management for hosts</li>
+        <li>Responsive layouts across the public site and admin dashboard</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🛠️ Development Process</h2>
+      <p>
+        I started by defining the project structure across three apps &mdash;
+        public frontend, admin dashboard, and backend &mdash; each with its own
+        clear responsibilities. I built the backend's Mongoose schemas and CRUD
+        routes for accommodations, reservations, and users first, then layered
+        JWT authentication and middleware on top before connecting the frontend.
+      </p>
+      <p>
+        Once the core CRUD flows were working end-to-end, I added the map
+        feature, the live cost calculator, and image upload, testing each
+        addition against the live app before moving to deployment on Render and
+        MongoDB Atlas.
+      </p>
+    </section>
+
+    <section>
+      <h2>🧠 Technical Decisions</h2>
+      <p>
+        I chose Leaflet with OpenStreetMap tiles over Google Maps to avoid
+        requiring an API key, keeping the project fully self-contained and free
+        to run. Listing coordinates are resolved from each listing's location
+        text via a lookup table rather than a paid geocoding service, which was
+        a deliberate trade-off between accuracy and simplicity for this scale
+        of project.
+      </p>
+      <p>
+        I split the codebase into a clearly separated three-app structure
+        (frontend, admin dashboard, backend) so each piece could be developed,
+        tested, and reasoned about independently, rather than one large mixed
+        application.
+      </p>
+    </section>
+
+    <section>
+      <h2>⚠️ Challenges and Solutions</h2>
+
+      <div class="challenge">
+        <strong>MongoDB connection failing with a DNS error.</strong> The standard
+        <code>mongodb+srv://</code> connection string relies on a DNS SRV
+        lookup that was being blocked on my network. I switched to Atlas's
+        non-SRV connection string, which lists servers directly and bypasses
+        the SRV lookup entirely.
+      </div>
+
+      <div class="challenge">
+        <strong>Server crashing on any database hiccup.</strong> The original
+        connection code called <code>process.exit(1)</code> on any MongoDB
+        error, killing the entire server instead of returning a clean error
+        response. I replaced it with a re-thrown error handled by Express's
+        error middleware, so a connection issue degrades gracefully instead of
+        taking the whole app down.
+      </div>
+
+      <div class="challenge">
+        <strong>Leaflet's zoom controls rendering above the sticky header.</strong>
+        Leaflet's internal z-index values escaped their container and floated
+        above the page header on scroll. I wrapped each map in its own CSS
+        stacking context (<code>isolate</code>), containing Leaflet's internal
+        layering so it can never climb above the rest of the UI.
+      </div>
+
+      <div class="challenge">
+        <strong>Duplicate, dead backend code.</strong> An earlier iteration of
+        the project had left two parallel sets of models, controllers, and
+        routes, only one of which was actually wired into the running server. I
+        traced the dependency graph, confirmed the unused set had zero live
+        references, and removed it &mdash; bringing the backend back in line
+        with the intended project structure.
+      </div>
+
+      <div class="challenge">
+        <strong>A double-click race condition on the listing form.</strong> A
+        rapid double-click could land on the "Next" and "Publish" buttons in
+        the same screen position in quick succession, submitting the form
+        before an image was chosen. I added a timestamp guard inside the
+        submit handler itself, rejecting any submission that follows a step
+        change within 600ms.
+      </div>
+    </section>
+
+    <section>
+      <h2>🧪 Testing</h2>
+      <p>
+        I manually tested the full reservation flow end-to-end &mdash; browsing,
+        filtering, viewing a listing, adjusting the cost calculator, and
+        reserving &mdash; as well as the full admin CRUD cycle for listings
+        (create with image upload, view, update, delete) and authentication
+        (valid login, invalid password, malformed email). I also tested the
+        deployed production build on Render against the live MongoDB Atlas
+        database to confirm behaviour matched local development.
+      </p>
+    </section>
+
+    <section>
+      <h2>📈 Project Outcome</h2>
+      <p>
+        The final result is a deployed, three-part full-stack application that
+        demonstrates end-to-end ownership of a real-world product: database
+        design, a secure authenticated API, an interactive map integration, and
+        a polished, responsive UI across both a public site and an admin
+        dashboard &mdash; taken from a rough build through real production
+        debugging to a live deployment.
+      </p>
+    </section>
+
+    <section>
+      <h2>🌱 What I Learned</h2>
+      <ul>
+        <li>Designing a multi-app project structure with clear separation of concerns</li>
+        <li>Diagnosing and fixing real production issues (DNS/connection failures, race conditions, dead code)</li>
+        <li>Integrating a mapping library (Leaflet) without relying on a paid API</li>
+        <li>Managing CSS stacking contexts and z-index conflicts in a real layout</li>
+        <li>JWT-based authentication and protecting routes with middleware</li>
+        <li>Deploying a full-stack app with a live database to Render and MongoDB Atlas</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🚀 Future Improvements</h2>
+      <ul>
+        <li>Add automated tests (Jest/Supertest) for the backend API</li>
+        <li>Store real listing coordinates instead of resolving them from location text</li>
+        <li>Add payment processing for reservations</li>
+        <li>Add guest reviews and host response functionality</li>
+        <li>Expand API documentation and inline code comments</li>
+      </ul>
+    </section>
+
+    <div class="links">
+      <a class="primary" href="https://banele-airbnb-frontend.onrender.com/" target="_blank" rel="noopener">Live Demo ↗</a>
+      <a href="https://github.com/Banele1815/Banele-Airbnb.git" target="_blank" rel="noopener">GitHub Repo</a>
+    </div>
+    <a class="back" href="https://gcina-banele-portfolio.netlify.app/#projects">← Back to Portfolio</a>
+
+    <footer>
+      Banele Airbnb Case Study &middot; Gcina Banele Kubeka
+    </footer>
+  </div>
+</body>
+</html>
