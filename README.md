@@ -3,7 +3,7 @@
 This is my personal developer portfolio showcasing my skills, projects, and experience as a Full Stack Developer and Azure Cloud/DevOps Engineer.
 
 ## 🚀 Live Site
-https://gcina-banele-kubeka-portfolio.netlify.app/
+https://gcina-banele-portfolio.netlify.app/
 
 ---
 
