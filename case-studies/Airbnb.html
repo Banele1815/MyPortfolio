@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Airbnb Case Study</title>
-<link rel="stylesheet" href="../css/Airbnb.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Airbnb Case Study</title>
+
+  <link rel="stylesheet" href="../css/Airbnb.css">
 </head>
+
 <body>
+
   <div class="wrap">
 
     <div class="eyebrow">// case-study</div>
+
     <h1>Airbnb</h1>
-    <div class="subtitle">Full-Stack Airbnb Clone Case Study</div>
+
+    <div class="subtitle">
+      Full-Stack Airbnb Clone Case Study
+    </div>
 
     <div class="pills">
       <span class="pill">React</span>
@@ -25,13 +33,34 @@
     </div>
 
     <div class="links">
-      <a class="primary" href="https://banele-airbnb-frontend.onrender.com/" target="_blank" rel="noopener">Live Demo ↗</a>
-      <a href="https://github.com/Banele1815/Banele-Airbnb.git" target="_blank" rel="noopener">GitHub Repo</a>
-      <a href="../index.html#projects">Back to Portfolio</a>
+      <a
+        class="primary"
+        href="https://banele-airbnb-frontend.onrender.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Live Demo ↗
+      </a>
+
+      <a
+        href="https://github.com/Banele1815/Banele-Airbnb.git"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub Repo
+      </a>
+
+      <a href="../index.html#projects">
+        Back to Portfolio
+      </a>
     </div>
+
+
+    <!-- PROJECT OVERVIEW -->
 
     <section>
       <h2>Project Overview</h2>
+
       <p>
         Airbnb is a full-stack clone of Airbnb, built as three connected
         parts: a public-facing guest site, an admin dashboard for hosts, and a
@@ -43,8 +72,12 @@
       </p>
     </section>
 
+
+    <!-- THE PROBLEM -->
+
     <section>
       <h2>The Problem</h2>
+
       <p>
         Recreating Airbnb's core booking flow end-to-end &mdash; not just the
         visual layout, but the underlying logic: dynamic pricing that accounts
@@ -55,8 +88,12 @@
       </p>
     </section>
 
+
+    <!-- THE SOLUTION -->
+
     <section>
       <h2>The Solution</h2>
+
       <p>
         I built a three-part application: a React/Vite frontend for guests, a
         separate React admin dashboard, and a Node/Express/MongoDB REST API
@@ -68,8 +105,12 @@
       </p>
     </section>
 
+
+    <!-- MY ROLE -->
+
     <section>
       <h2>My Role</h2>
+
       <p>
         I was responsible for the full build &mdash; planning the three-part
         architecture, designing and building the UI, implementing the backend
@@ -78,16 +119,89 @@
       </p>
     </section>
 
-    <section>
-      <h2>Key Features</h2>
-      <ul>
-        <li>Category and location-based listing filtering grids</li>
-        <li>Interactive map engine running keyless on Leaflet and OpenStreetMap</li>
-        <li>Dynamic booking matrix with real-time fee and discount calculations</li>
-        <li>Role-based dashboard security isolating Admin, Host, and Guest operations</li>
-      </ul>
-    </section>
 
+    <!-- CHALLENGES -->
+<!-- CHALLENGES -->
+
+<section class="challenges-section">
+  <h2>Challenges &amp; How I Solved Them</h2>
+
+  <div class="challenge">
+    <h3>Connecting the Frontend, Backend and Database</h3>
+    <p>
+      One of the biggest challenges was making sure the React frontend,
+      Node/Express backend, and MongoDB database worked together reliably.
+      Data that worked correctly in one part of the application could still
+      fail when passed between layers.
+    </p>
+    <p>
+      I solved this by testing the data flow step by step, checking API
+      requests and responses, validating MongoDB schemas, and using consistent
+      data structures between the frontend and backend. This helped me identify
+      whether an issue was coming from the UI, API, or database instead of
+      trying to fix everything at once.
+    </p>
   </div>
-</body>
-</html>
+
+  <div class="challenge">
+    <h3>Building the Dynamic Booking Cost Calculator</h3>
+    <p>
+      Calculating the booking total was more complex than displaying a fixed
+      price. The total needed to respond to the number of nights, number of
+      guests, cleaning fees, service fees, occupancy taxes, and applicable
+      discounts.
+    </p>
+    <p>
+      I solved this by breaking the calculation into smaller parts and updating
+      the total whenever the selected dates or guest count changed. I also
+      tested different combinations of dates and guests to make sure the
+      displayed total remained consistent with the booking information.
+    </p>
+  </div>
+
+  <div class="challenge">
+    <h3>Handling Location Data and Interactive Maps</h3>
+    <p>
+      Another challenge was displaying listing locations accurately on an
+      interactive map without relying on a paid mapping API. I needed the
+      listing data and map coordinates to stay in sync so that users could
+      understand where a property was located.
+    </p>
+    <p>
+      I solved this by implementing Leaflet with OpenStreetMap and connecting
+      the map to the listing data. This allowed me to display interactive
+      markers without requiring a paid mapping API.
+    </p>
+  </div>
+
+  <div class="challenge">
+    <h3>Authentication and Protected Admin Features</h3>
+    <p>
+      Protecting the admin functionality was another challenge because
+      sensitive operations such as creating, updating, and deleting listings
+      should not be accessible to every user.
+    </p>
+    <p>
+      I implemented JWT-based authentication and protected the relevant API
+      routes. The frontend also uses authentication state to control access
+      to dashboard functionality.
+    </p>
+  </div>
+
+  <div class="challenge">
+    <h3>Debugging Production and Deployment Issues</h3>
+    <p>
+      Getting the application working locally was only part of the challenge.
+      Deploying the frontend, admin dashboard, and backend introduced
+      additional issues around environment variables, API URLs, CORS, and
+      communication between the deployed services.
+    </p>
+    <p>
+      I solved these problems by testing each deployed service separately,
+      checking browser and server logs, verifying environment variables, and
+      tracing failed requests between the frontend and backend. This helped
+      me understand how the different parts needed to communicate in a
+      production environment.
+    </p>
+  </div>
+</section>
